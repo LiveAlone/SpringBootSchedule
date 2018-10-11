@@ -3,6 +3,7 @@ package org.yqj.schedule.demo;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.http.MediaType;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,10 +21,10 @@ import java.net.UnknownHostException;
  */
 @SpringBootApplication
 @Controller
+@EnableScheduling
 public class BootDemoApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder()
-                .banner(new DemoBanner())
                 .sources(BootDemoApplication.class)
                 .run(args);
     }
